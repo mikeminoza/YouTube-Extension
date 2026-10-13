@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Side Panel",
+  "version": "1.1.2",
+  "description": "YouTube in your browser's side panel. Log in once, watch and browse without leaving your tab.",
+  "minimum_chrome_version": "116",
+  "permissions": ["sidePanel", "declarativeNetRequestWithHostAccess", "cookies", "contextMenus", "webRequest", "storage", "declarativeNetRequestFeedback", "webNavigation"],
+  "host_permissions": ["https://*.youtube.com/*", "https://accounts.google.com/*", "https://consent.google.com/*", "<all_urls>"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "action": {
+    "default_title": "Open YouTube",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "commands": {
+    "open-panel": {
+      "suggested_key": { "default": "Alt+Shift+Y" },
+      "description": "Open the YouTube side panel"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>YouTube</title>
+  <link rel="stylesheet" href="sidepanel.css">
+</head>
+<body>
+  <div id="login-bar" class="bar" hidden>
+    <span class="bar-text">You're not signed in to YouTube.</span>
+    <button id="login" class="bar-login" type="button">Sign in</button>
+    <button id="dismiss" class="bar-dismiss" type="button" aria-label="Dismiss">&times;</button>
+  </div>
+  <div id="redirect-bar" class="bar" hidden>
+    <span id="redirect-text" class="bar-text"></span>
+    <button id="open-tab" class="bar-login" type="button">Open in tab</button>
+    <button id="retry" class="bar-secondary" type="button">Reload</button>
+  </div>
+  <iframe
+    id="youtube"
+    title="YouTube"
+    allow="autoplay; encrypted-media; clipboard-read; clipboard-write; fullscreen; picture-in-picture"
+    allowfullscreen
+  ></iframe>
+  <script src="diag.js"></script>
+  <script src="sidepanel.js"></script>
+</body>
+</html>
